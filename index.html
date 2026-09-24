@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Damian Kondek — Audio & Film Portfolio</title>
+    <style>
+        /* Psychologically Optimised Professional Styling Variables */
+        :root {
+            --bg-base: #f1f5f9;         /* Clean, organized light slate gray */
+            --bg-card: #ffffff;         /* Pure white for high contrast readability */
+            --primary-dark: #0f172a;    /* Deep Midnight Blue - communicates trust & depth */
+            --text-main: #1e293b;       /* Dark slate for readable text */
+            --text-muted: #475569;     /* Soft slate for narrative text */
+            --accent-gold: #b45309;    /* Muted Dark Gold - implies premium quality & prestige */
+            --compliance-green: #15803d;/* Stable emerald green - indicates official clearance */
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-base);
+            color: var(--text-main);
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Minimalist Navigation Bar */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 3rem;
+            background-color: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        .nav-logo {
+            font-size: 1.1rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--primary-dark);
+        }
+        .nav-status-badge {
+            font-size: 0.75rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            border: 1px solid var(--primary-dark);
+            padding: 0.4rem 1rem;
+            border-radius: 50px;
+            font-weight: 600;
+            color: var(--primary-dark);
+        }
+
+        /* Cinematic Full-Width Hero Section */
+        .hero-section {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            height: 75vh;
+            padding: 0 1.5rem;
+            background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.98)), 
+                        url('https://unsplash.com') no-repeat center center/cover;
+            color: #ffffff;
+        }
+        .hero-section h1 {
+            font-size: 3.8rem;
+            font-weight: 400;
+            letter-spacing: -1px;
+            margin: 0 0 1rem 0;
+            line-height: 1.1;
+        }
+        .hero-section p {
+            font-size: 1.4rem;
+            color: #94a3b8;
+            max-width: 600px;
+            margin: 0 0 2.5rem 0;
+            font-weight: 300;
+        }
+
+        /* Action Buttons */
+        .cta-btn {
+            background-color: var(--accent-gold);
+            color: #ffffff;
+            text-decoration: none;
+            padding: 1rem 2.5rem;
+            font-size: 0.9rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            border-radius: 4px;
+            transition: opacity 0.2s;
+        }
+        .cta-btn:hover {
+            opacity: 0.9;
+        }
+
+        /* Spaced Visual Content Sections */
+        .content-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 5rem 2rem;
+        }
+
+        .split-grid {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 4rem;
+            align-items: start;
+            margin-bottom: 4rem;
+            background: var(--bg-card);
+            padding: 3rem;
+            border-radius: 8px;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+        }
+
+        @media (max-width: 768px) {
+            .split-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+                padding: 1.5rem;
+            }
+            .hero-section h1 { font-size: 2.5rem; }
+        }
+
+        .grid-left h2 {
+            font-size: 1.6rem;
+            font-weight: 600;
+            letter-spacing: -0.5px;
+            margin-top: 0;
+            color: var(--primary-dark);
+            border-left: 4px solid var(--accent-gold);
+            padding-left: 1rem;
+        }
+
+        .grid-right p {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            color: var(--text-muted);
+            margin-top: 0;
+        }
+
+        /* Premium Verified Card Box - Highlighted in Safety Green */
+        .compliance-banner {
+            background-color: #f0fdf4;
+            border: 1px solid #bbf7d0;
+            border-left: 5px solid var(--compliance-green);
+            padding: 2.5rem;
+            text-align: center;
+            margin-bottom: 4rem;
+            border-radius: 8px;
+        }
+        .compliance-tag {
+            color: var(--compliance-green);
+            font-weight: 700;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Footer / Contact Details */
+        footer {
+            border-top: 1px solid #e2e8f0;
+            padding: 5rem 2rem;
+            text-align: center;
+            background-color: var(--primary-dark);
+            color: #ffffff;
+        }
+        footer h3 {
+            font-size: 1.8rem;
+            font-weight: 400;
+            margin: 0 0 1rem 0;
+        }
+        .footer-links a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 1.1rem;
+            margin: 0 1rem;
+            font-weight: 500;
+            border-bottom: 2px solid var(--accent-gold);
+            padding-bottom: 5px;
+            transition: color 0.2s;
+        }
+        .footer-links a:hover {
+            color: var(--accent-gold);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Minimal Navigation -->
+    <nav>
+        <div class="nav-logo">D.K. Portfolio</div>
+        <div class="nav-status-badge">Available Local Hire</div>
+    </nav>
+
+    <!-- Visual Headline Cover Page -->
+    <div class="hero-section">
+        <h1>Damian Kondek</h1>
+        <p>Sound Engineering & Specialized Production Crew Support based in Limerick City.</p>
+        <a href="#contact" class="cta-btn">Get In Touch</a>
+    </div>
+
+    <!-- Main Content Area -->
+    <div class="content-container">
+
+        <!-- Structural Block 1: About -->
+        <div class="split-grid">
+            <div class="grid-left">
+                <h2>Professional Profile</h2>
+            </div>
+            <div class="grid-right">
+                <p>Proactive, technically focused audio technician operating permanently within the Limerick City zone. Experienced in soundstage environments, signal routing management, and production utility support. Excellent physical conditioning and spatial awareness maintained daily.</p>
+            </div>
+        </div>
+
+        <!-- Structural Block 2: Clearances -->
+        <div class="compliance-banner">
+            <span class="compliance-tag">✓ Statutory Compliance Verified</span>
+            <h3 style="font-weight: 600; margin: 0.5rem 0; color: var(--primary-dark);">Screen Ireland Screen Pass Certified</h3>
+            <p style="color: var(--text-muted); font-size: 0.95rem; margin: 0.5rem 0 0 0;">Fully compliant with current Irish on-set operational health, safety, and risk assessment legislation.</p>
+        </div>
+
+        <!-- Structural Block 3: Core Competencies -->
+        <div class="split-grid">
+            <div class="grid-left">
+                <h2>Technical Focus</h2>
+            </div>
+            <div class="grid-right">
+                <p style="margin-bottom: 1.5rem;"><strong>Audio Department & DAWs:</strong> Full professional experience operating Cubase 10 Pro for advanced multitrack systems, signal routing layouts, mixing configurations, and audio data management.</p>
+                <p style="margin: 0;"><strong>Logistics & Operations:</strong> Heavy equipment staging, local set mobility tracking, registered local hire for upcoming <strong>Troy Studios</strong> and <strong>Film Limerick</strong> productions.</p>
+            </div>
+        </div>
+
+        <!-- Structural Block 4: Hardware Maintenance (NEW ADDITION) -->
+        <div class="split-grid">
+            <div class="grid-left">
+                <h2>Bench Skills & Maintenance</h2>
+            </div>
+            <div class="grid-right">
+                <p style="margin: 0;">Proficient in field cable repairs, soldering iron diagnostics (including complex XLR and LEMO connection re-terminations), and rapid troubleshooting of delicate field equipment under tight production timelines.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Footer System -->
+    <footer id="contact">
+        <h3>Start A Production Project</h3>
+        <p style="color: #94a3b8; margin-bottom: 2.5rem;">Available for immediate local placement across the Mid-West region.</p>
+        <div class="footer-links">
+            <a href="mailto:leofficceus@outlook.com">leofficceus@outlook.com</a>
+            <a href="tel:+353874750332">+353 (087) 475 0332</a>
+        </div>
+    </footer>
+
+</body>
+</html>
